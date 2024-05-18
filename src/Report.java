@@ -1,13 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import java.util.ArrayList;
+import java.util.List;
 
-/**
- *
- * @author HC-atiaf
- */
 public class Report {
-    
+        private int reportId;
+    private String content;
+    private List<TestResult> testResults; // Composition with TestResult
+
+    public Report(int reportId, String content) {
+        this.reportId = reportId;
+        this.content = content;
+        this.testResults = new ArrayList<>();
+    }
+
+    public Report() {
+
+    }
 }
