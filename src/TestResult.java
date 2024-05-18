@@ -1,13 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author HC-atiaf
- */
 public class TestResult {
-    
+        private int testId;
+    private String result;
+    private LaboratorySpecialist specialist; // Association with LaboratorySpecialist
+    private Report report; // Composition with Report
+    public TestResult(int testId, String result, LaboratorySpecialist specialist) {
+        this.testId = testId;
+        this.result = result;
+        this.specialist = specialist;
+        this.report = new Report();
+    }
+
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
+
+    public TestResult() {
+
+    }
 }
